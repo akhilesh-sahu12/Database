@@ -17,7 +17,7 @@
  Database Management System-: A special software program that helps user to create and Maintain a database.
                               Any DBMS is not the actual database. But In order to Create/Manage 
                               the Databese we need a software apllication that is Database Management System.
-                              DBMs is a software that allow access to data stored in a database and provide an easy 
+                              DBMS is a software that allow access to data stored in a database and provide an easy 
                               and effective method of
                                                   1. Defining the information.
                                                   2. Storing the information.
@@ -40,6 +40,139 @@ Real Example-:
                                                                             create read update delete
                                                                               |      |     |      |
                                                                               C      R     U      D
+
+Level of DataBase: 
+                                              User
+                                                |
+                                   view Level (external schema)
+                                                |
+                                   Logical Level (Conceptual schema) -> what data stored in DB
+                                                |
+                                   Physical Level (Internal schema) -> How data is storedin DB
+                                                |
+                                             DataBase 
+ Database Architecture-:
+                     A Database Architecture is a representation of DBMS design. It helps to design, develop, implement, 
+                     and maintain the database management system. A DBMS architecture allows dividing the database system
+                     into individual components that can be independently modified, changed, replaced, and altered. It 
+                     also helps to understand the components of a database.
+                A Database stores critical information and helps access data quickly and securely. Therefore, selecting 
+                the correct Architecture of DBMS helps in easy and efficient data management.
+
+Types of DBMS Architecture-:
+                      a) 1-Tier Architecture
+                      b) 2-Tier Architecture
+                      c) 3-Tier Architecture
+a) 1-Tier Architecture-:
+                     1 Tier Architecture in DBMS is the simplest architecture of Database in which the client, server, and Database all reside 
+                    on the same machine. A simple one tier architecture example would be anytime you install a Database in your system and 
+                    access it to practice SQL queries. But such architecture is rarely used in production.
+
+b) 2-Tier Architecture-:
+                    A 2 Tier Architecture in DBMS is a Database architecture where the presentation layer runs on a client (PC, Mobile, Tablet, etc.), 
+                    and data is stored on a server called the second tier. Two tier architecture provides added security to the DBMS as it is not 
+                    exposed to the end-user directly. It also provides direct and faster communication.
+
+c) 3-Tier Architecture-:A 3 Tier Architecture in DBMS is the most popular client server architecture in DBMS in which the development and 
+                        maintenance of functional processes, logic, data access, data storage, and user interface is done independently as 
+                        separate modules. Three Tier architecture contains a presentation layer, an application layer, and a database server.
+                      3-Tier database Architecture design is an extension of the 2-tier client-server architecture. A 3-tier architecture has 
+                      the following layers:
+                        a) Presentation layer (your PC, Tablet, Mobile, etc.)
+                        b) Application layer (server)
+                        c) Database Server
+
+
+Types of DataBase Model-:
+                          1. Entity Relationship Model
+                          2. Relational Model
+                          3. Hierachical Model
+                          4. Network Model
+                          5. Object-Oriented Model
+                          6. Object-Relational Model
+
+              Entity-: Every Object (Noun) is a Entity.
+              Relationship-: Association amongs the entity.
+              Attribute-: Which describe the entity.
+              Strong Entity-: An entity having a particular Attribute as primary key.
+              Weak Entity-: Entities which can not for their own attribute as primary key.
+
+ACID Property-:
+              A transaction is a single logical unit of work which accesses and possibly modifies 
+              the contents of a database. Transactions access data using read and write operations. 
+              In order to maintain consistency in a database, before and after the transaction, 
+              certain properties are followed. These are called ACID properties. 
+
+            1. Atomicity: 
+                  By this, we mean that either the entire transaction takes place at once or doesn’t happen 
+                  at all. There is no midway i.e. transactions do not occur partially. Each transaction 
+                  is considered as one unit and either runs to completion or is not executed at all. 
+                  It involves the following two operations. 
+                —Abort: If a transaction aborts, changes made to database are not visible. 
+                —Commit: If a transaction commits, changes made are visible. 
+                  Atomicity is also known as the ‘All or nothing rule’. 
+
+            2. Consistency: 
+                  This means that integrity constraints must be maintained so that the database is consistent 
+                  before and after the transaction. It refers to the correctness of a database.
+            
+            3. Isolation 
+                  This property ensures that multiple transactions can occur concurrently without leading to the inconsistency 
+                  of database state. Transactions occur independently without interference. Changes occurring in a particular 
+                  transaction will not be visible to any other transaction until that particular change in that transaction 
+                  is written to memory or has been committed. This property ensures that the execution of transactions 
+                  concurrently will result in a state that is equivalent to a state achieved these were executed serially in some order. 
+            
+            4. Durability: 
+                  This property ensures that once the transaction has completed execution, the updates and modifications to 
+                  the database are stored in and written to disk and they persist even if a system failure occurs. 
+                  These updates now become permanent and are stored in non-volatile memory. The effects of the transaction, 
+                  thus, are never lost. 
+
+Database Management System (DBMS) -: It is a software that is used to define, create and maintain a database and provides controlled access to the data. 
+
+Relational Database Management System (RDBMS) -: It is an advanced version of a DBMS.  
+                DBMS	                                              RDBMS
+       1. DBMS stores data as file.	                     1. RDBMS stores data in tabular form.
+       2. Data elements need to access individually.	   2. Multiple data elements can be accessed at the same time.
+       3. No relationship between data.	                 3. Data is stored in the form of tables which are related to each other.
+       4. Normalization is not present.	                 4. Normalization is present.
+       5. DBMS does not support distributed database.	   5. RDBMS supports distributed database.
+       6. It stores data in either a navigational or     6. It uses a tabular structure where the headers are the column names, 
+          hierarchical form.	                                  and the rows contain corresponding values.
+       7. It deals with small quantity of data.	         7. It deals with large amount of data.
+       8. Data redundancy is common in this model.	     8. Keys and indexes do not allow Data redundancy.
+       9. It is used for small organization and deal     9. It is used to handle large amount of data.
+          with small data.	
+       10. It supports single user.	                     10.It supports multiple users.
+       11. Data fetching is slower for the large amount  11. Data fetching is fast because of relational approach.
+           of data.
+       12. The data in a DBMS is subject to low security 12.There exists multiple levels of data security in a RDBMS.
+       levels with regards to data manipulation.	
+       13. Low software and hardware necessities.	       13. Higher software and hardware necessities.
+           Examples: XML, Window Registry, etc.	             Examples: MySQL, PostgreSQL, SQL Server, Oracle, Microsoft Access etc.
+       
+Trigger: A trigger is a stored procedure in database which automatically invokes whenever a special event in the database occurs. For example, a trigger can be invoked when a row is inserted into a specified table or when certain table columns are being updated.
+
+          Syntax:create trigger [trigger_name] 
+          [before | after]  
+          {insert | update | delete}  
+          on [table_name]  
+          [for each row]  
+          [trigger_body] 
+          Explanation of syntax:
+
+                         create trigger [trigger_name]: Creates or replaces an existing trigger with the trigger_name.
+                         [before | after]: This specifies when the trigger will be executed.
+                         {insert | update | delete}: This specifies the DML operation.
+                         on [table_name]: This specifies the name of the table associated with the trigger.
+                         [for each row]: This specifies a row-level trigger, i.e., the trigger will be executed for each row being affected.
+                         [trigger_body]: This provides the operation to be performed as trigger is fired
+                         BEFORE and AFTER of Trigger:
+                                   BEFORE triggers run the trigger action before the triggering statement is run.
+                                   AFTER triggers run the trigger action after the triggering statement is run.
+
+
  Types Of DataBase Management System-:
                    1. SQL
                    2. NoSQL 
@@ -88,10 +221,164 @@ Real Example-:
                                                                                   major:Computer Science  ---  "major": " Biology"
 
 */
+
+SQL Commands-:
+          SQL commands are instructions. It is used to communicate with the database. It is also used to perform specific tasks, 
+          functions, and queries of data.
+          SQL can perform various tasks like create a table, add data to tables, drop the table, modify the table, set permission for users.
+Types of SQL Commands:
+          There are five types of SQL commands: DDL, DML, DCL, TCL, and DQL.
 /*
 SQL-Structure Query Language is standard language
      We use to interact to our databses
+   
    query- find all detail of student
+         for example-: A google search is a query
+
+   Queries-: A query is a set of instructions given to RDBMS(Written in SQL) that tells
+             the RDBMS what information we want. It's to reterve for one or more data in DB.
+             Often hidden in a complex schema.
+        GOAL-: Goal is to only get the data you head.
+
+1. Data Definition Language (DDL)
+                    DDL changes the structure of the table like creating a table, deleting a table, altering a table, etc.
+                    All the command of DDL are auto-committed that means it permanently save all the changes in the database.
+               Here are some commands that come under DDL:
+
+                   -> CREATE
+                   -> ALTER
+                   -> DROP
+                   -> TRUNCATE
+
+ How to create Database-:
+              create database <databaseName>; 
+                    create database student;
+
+           -> CREATE-: It is used to create a new table in the database.
+                  Syntax: CREATE TABLE TABLE_NAME (COLUMN_NAME DATATYPES[,....]);  
+                  Example:
+                       CREATE TABLE EMPLOYEE(Name VARCHAR2(20), Email VARCHAR2(100), DOB DATE); 
+
+           -> DROP: It is used to delete both the structure and record stored in the table.
+                 Syntax: DROP TABLE table_name;  
+                 Example: DROP TABLE EMPLOYEE;  
+
+           -> ALTER: It is used to alter the structure of the database. This change could be either to modify 
+                    the characteristics of an existing attribute or probably to add a new attribute.
+                    Syntax: To add a new column in the table
+                        ALTER TABLE table_name ADD column_name COLUMN-definition;    
+                        To modify existing column in the table:
+
+                     ALTER TABLE table_name MODIFY(column_definitions....);  
+                     EXAMPLE:
+                           ALTER TABLE STU_DETAILS ADD(ADDRESS VARCHAR2(20));  
+                           ALTER TABLE STU_DETAILS MODIFY (NAME VARCHAR2(20));  
+
+            -> TRUNCATE: It is used to delete all the rows from the table and free the space containing the table.
+                    Syntax:
+                         TRUNCATE TABLE table_name;  
+                    Example:
+                         TRUNCATE TABLE EMPLOYEE;  
+
+
+2. Data Manipulation Language-:
+                      DML commands are used to modify the database. It is responsible for all form of changes in the database.
+                      The command of DML is not auto-committed that means it can't permanently save all the changes in the database. 
+                      They can be rollback.
+                    Here are some commands that come under DML:
+                        -> INSERT
+                        -> UPDATE
+                        -> DELETE
+
+              -> INSERT: The INSERT statement is a SQL query. It is used to insert data into the row of a table.
+                 Syntax: INSERT INTO TABLE_NAME
+                                        (col1, col2, col3,.... col N)  
+                                         VALUES (value1, value2, value3, .... valueN);  
+                                      Or 
+                         INSERT INTO TABLE_NAME    
+                                      VALUES (value1, value2, value3, .... valueN);    
+                         For example:
+                                   INSERT INTO javatpoint (Author, Subject) VALUES ("Sonoo", "DBMS");  
+
+               -> UPDATE: This command is used to update or modify the value of a column in the table.
+                  Syntax:
+                        UPDATE table_name SET [column_name1= value1,...column_nameN = valueN] [WHERE CONDITION]   
+                      For example:
+                               UPDATE students    
+                                SET User_Name = 'Sonoo'    
+                                WHERE Student_Id = '3'  
+
+                -> DELETE: It is used to remove one or more row from a table.
+                  Syntax:
+                        DELETE FROM table_name [WHERE condition];  
+                    For example:
+                        DELETE FROM javatpoint  
+                            WHERE Author="Sonoo"; 
+
+
+3. Data Control Language-:
+                DCL commands are used to grant and take back authority from any database user.
+                Here are some commands that come under DCL:
+                  -> Grant
+                  -> Revoke
+
+               -> Grant: It is used to give user access privileges to a database.
+                    Example:
+                       GRANT SELECT, UPDATE ON MY_TABLE TO SOME_USER, ANOTHER_USER;  
+
+               -> Revoke: It is used to take back permissions from the user.
+                    Example:
+                        REVOKE SELECT, UPDATE ON MY_TABLE FROM USER1, USER2;  
+
+
+4. Transaction Control Language-:
+                TCL commands can only use with DML commands like INSERT, DELETE and UPDATE only.
+                These operations are automatically committed in the database that's why they cannot 
+                be used while creating tables or dropping them. 
+                Here are some commands that come under TCL:
+
+                   -> COMMIT
+                   -> ROLLBACK
+                   -> SAVEPOINT
+
+               -> Commit: Commit command is used to save all the transactions to the database.
+                  Syntax:
+                       COMMIT;  
+                    Example:
+                         DELETE FROM CUSTOMERS  
+                            WHERE AGE = 25;  
+                            COMMIT;  
+
+               -> Rollback: Rollback command is used to undo transactions that have not already been saved to the database.
+                  Syntax:
+                      ROLLBACK;  
+                    Example:
+                        DELETE FROM CUSTOMERS  
+                        WHERE AGE = 25;  
+                        ROLLBACK;  
+
+               -> SAVEPOINT: It is used to roll the transaction back to a certain point without rolling back the entire transaction.
+                  Syntax:
+                        SAVEPOINT SAVEPOINT_NAME;  
+
+
+5. Data Query Language-:
+                 DQL is used to fetch the data from the database.
+                 It uses only one command:
+                 SELECT
+
+              -> SELECT: This is the same as the projection operation of relational algebra. It is used to select the attribute 
+                         based on the condition described by WHERE clause.
+                 Syntax:
+                       SELECT expressions    
+                         FROM TABLES    
+                         WHERE conditions;  
+                 For example:
+                       SELECT emp_name  
+                       FROM employee  
+                       WHERE age > 20;  
+
+
            Student Table(Rows-Columns)                                     
      Stu_id        stu_name         major                        
      1            Akhilesh sahu    Computer Science                 
@@ -116,10 +403,7 @@ SQL-Structure Query Language is standard language
      1            Akhilesh sahu    Computer Science   
 */
 /*
-How to create Database-:
-              create database <databaseName>; */
-                    create database student;
-/*
+
 How to delete database-:
               drop database <databaseName>; */
                     drop database student;
@@ -216,7 +500,7 @@ show tablename;
      ->show students;
   
   Null -: the value is not known.
-           null does means zero.
+           null doesn't means zero.
 
   not null-: we can not this fieald is blank
    create table students
@@ -235,6 +519,8 @@ show tablename;
 
 Default value-:
   alter table student modify(major Default "not alloted");
+
+
           
 
      
